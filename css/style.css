@@ -78,10 +78,6 @@
 }
 
 /*** Navbar ***/
-.navbar-collapse {
-    background-color: rgba(184, 137, 94, 0.5);
-}
-
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -112,7 +108,9 @@
         padding: 10px 0;
         color: #fff !important;
     }
-
+    .navbar-collapse {
+        background-color: rgba(184, 137, 94, 0.5);
+    }
     .navbar-light .navbar-nav {
         border-top: 1px solid #EEEEEE;
     }
