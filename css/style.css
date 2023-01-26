@@ -77,7 +77,28 @@
     font-weight: normal;
 }
 
+/** top-bar **/
+.top-bar {
+    position: relative;
+    z-index: 9;
+    color: #fff;
+}
+
+.top-bar a {
+    background: none;
+}
+
 /*** Navbar ***/
+nav {
+    background: none;
+}
+
+nav .lang-btn {
+    height: 70px;
+    background-color: rgba(184, 137, 94, 0.5);
+    border-color: #fff;
+}
+
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -108,9 +129,11 @@
         padding: 10px 0;
         color: #fff !important;
     }
+
     .navbar-collapse {
         background-color: rgba(184, 137, 94, 0.5);
     }
+
     .navbar-light .navbar-nav {
         border-top: 1px solid #EEEEEE;
     }
@@ -122,7 +145,7 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: var(--dark);
+    color: #fff;
     font-weight: 500;
 }
 
@@ -134,6 +157,13 @@
 
 .navbar-light.sticky-top img {
     width: 290px;
+}
+
+#navbarCollapse {
+    background-color: rgba(184, 137, 94, 0.5);
+    border: 0px solid;
+    border-top-left-radius: 85px;
+    border-bottom-left-radius: 85px;
 }
 
 @media (min-width: 992px) {
