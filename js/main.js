@@ -9,9 +9,24 @@
             }
         }, 1);
     };
+    function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeColor, repeat) {
+        let paths = document.querySelectorAll("path");
+        let mode = repeat ? 'infinite' : 'forwards'
+        for (let i = 0; i < paths.length; i++) {
+            const path = paths[i];
+            const length = path.getTotalLength();
+            path.style["stroke-dashoffset"] = `${length}px`;
+            path.style["stroke-dasharray"] = `${length}px`;
+            path.style["stroke-width"] = `${strokeWidth}px`;
+            path.style["stroke"] = `${strokeColor}`;
+            path.style["animation"] = `${duration}s svg-text-anim ${mode} ${timingFunction}`;
+            path.style["animation-delay"] = `${i * delay}s`;
+        }
+    }
+    setTextAnimation(0.1, 2.7, 2, 'linear', '#ffffff', true);
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,8 +39,8 @@
             $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -35,7 +50,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
@@ -54,8 +69,8 @@
         items: 1,
         dots: true,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
@@ -69,17 +84,17 @@
         center: true,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             }
         }
     });
@@ -94,8 +109,8 @@
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
+        portfolioIsotope.isotope({ filter: $(this).data('filter') });
     });
-    
+
 })(jQuery);
 

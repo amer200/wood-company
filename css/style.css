@@ -161,9 +161,11 @@ nav {
     .shadow-sm .navbar-toggler-icon {
         color: rgb(184, 137, 94);
     }
-    .shadow-sm #navbarCollapse{
-        background-color: rgba(184, 137, 94,0.5);
+
+    .shadow-sm #navbarCollapse {
+        background-color: rgba(184, 137, 94, 0.5);
     }
+
     .navbar-light.sticky-top img {
         width: 230px !important;
         height: 140px;
@@ -753,4 +755,43 @@ nav {
 
 .footer .copyright a:hover {
     color: var(--primary);
+}
+
+/*** loading**/
+/* Google chrome */
+@-webkit-keyframes svg-text-anim {
+    40% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+
+    60% {
+        stroke-dashoffset: 0;
+        fill: #b8895e;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: #b8895e;
+    }
+
+}
+
+/* Most browsers */
+@keyframes svg-text-anim {
+    40% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+
+    60% {
+        stroke-dashoffset: 0;
+        fill: #b8895e;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: #b8895e;
+    }
+
 }
